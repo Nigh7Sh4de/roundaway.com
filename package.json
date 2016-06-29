@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/nigh7sh4de/roundaway.com/issues"
   },
-  "homepage": "https://github.com/nigh7sh4de/roundaway.com#readme"
+  "homepage": "https://github.com/nigh7sh4de/roundaway.com#readme",
+  "dependencies": {
+    "angular": "1.5.7",
+    "angular-route": "1.5.7",
+    "bootstrap": "4.0.0-alpha.2",
+    "jquery": "2.2.4",
+    "tether": "1.3.2"
+  }
 }
