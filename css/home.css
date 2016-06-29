@@ -3,7 +3,7 @@
 }
 
 #homePageContainer #homePageMainBanner {
-    background-image: url('../images/yellow-car-wallpaper.jpg');
+    background-image: url('../images/yellow-car-wallpaper-tiltshift.jpg');
     height: 100vh;
     color: white;
 }
@@ -22,6 +22,13 @@
     height: 30%;
     padding: 30px;
     margin: auto;
+}
+
+#homePageContainer #homePageMainBanner .title {
+    display: block;
+    position: relative;
+    margin: auto;
+    text-align: center;
 }
 
 #homePageContainer #homePageAboutUs .container {
