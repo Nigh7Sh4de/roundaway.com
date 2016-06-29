@@ -1,0 +1,19 @@
+{
+  "name": "roundaway.com",
+  "version": "0.0.0",
+  "description": "The company website for the startup Roundaway Inc",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nigh7sh4de/roundaway.com.git"
+  },
+  "author": "nigh7sh4de",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nigh7sh4de/roundaway.com/issues"
+  },
+  "homepage": "https://github.com/nigh7sh4de/roundaway.com#readme"
+}
