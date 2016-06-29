@@ -1,0 +1,29 @@
+#homePageContainer .parallax {
+    width: 100%;
+}
+
+#homePageContainer #homePageMainBanner {
+    background-image: url('../images/yellow-car-wallpaper.jpg');
+    height: 100vh;
+    color: white;
+}
+
+#homePageContainer #homePageMainBanner h2 {
+    padding-left: 20px;
+    font-style: italic;
+}
+
+#homePageContainer #homePageMainBanner .container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30%;
+    padding: 30px;
+    margin: auto;
+}
+
+#homePageContainer #homePageAboutUs .container {
+    padding: 5% 10% 5% 10%;
+}

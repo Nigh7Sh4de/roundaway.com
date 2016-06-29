@@ -1,0 +1,8 @@
+.container {
+    padding-top: 20px;
+}
+
+.parallax {
+    position: 'relative';
+    background: no-repeat fixed center 0;
+}
