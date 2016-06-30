@@ -15,6 +15,14 @@
             templateUrl: 'views/contact.html',
             controller: 'ContactCtrl'
         })
+        .when('/login', {
+            templateUrl: 'views/login.html',
+            controller: 'LoginCtrl'
+        })
+        .when('/profile', {
+            templateUrl: 'views/profile.html',
+            controller: 'ProfileCtrl'
+        })
         .when('/404', {
             templateUrl: 'views/404.html'
         })
