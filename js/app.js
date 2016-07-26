@@ -1,7 +1,8 @@
 (function() {
-    var roundawaycom = window.roundawaycom = angular.module('roundawaycom', ['ngRoute']);
+    var roundaway = window.roundaway = {};
+    roundaway.com = angular.module('roundawaycom', ['ngRoute']);
 
-    roundawaycom.config(function($routeProvider) {
+    roundaway.com.config(function($routeProvider) {
         $routeProvider
         .when('/', {
             templateUrl: 'views/home.html',

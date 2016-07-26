@@ -4,5 +4,5 @@
         
     }
 
-    roundawaycom.controller('ProfileCtrl', ['$scope', '$http', ProfileCtrl])
+    roundaway.com.controller('ProfileCtrl', ['$scope', '$http', ProfileCtrl])
 }());

@@ -4,5 +4,5 @@
         $scope.test = "home controller started";
     }
 
-    roundawaycom.controller('HomeCtrl', HomeCtrl)
+    roundaway.com.controller('HomeCtrl', HomeCtrl)
 }());

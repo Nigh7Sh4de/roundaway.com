@@ -16,5 +16,5 @@
         })
     }
 
-    roundawaycom.controller('MainCtrl', MainCtrl)
+    roundaway.com.controller('MainCtrl', MainCtrl)
 }());

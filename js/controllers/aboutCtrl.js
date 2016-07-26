@@ -4,5 +4,5 @@
         $scope.test = "about controller started";
     }
 
-    roundawaycom.controller('AboutCtrl', AboutCtrl)
+    roundaway.com.controller('AboutCtrl', AboutCtrl)
 }());

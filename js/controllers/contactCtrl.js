@@ -4,5 +4,5 @@
         $scope.test = "contact controller started";
     }
 
-    roundawaycom.controller('ContactCtrl', ContactCtrl)
+    roundaway.com.controller('ContactCtrl', ContactCtrl)
 }());
