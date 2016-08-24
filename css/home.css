@@ -1,10 +1,14 @@
-#homePageContainer .parallax {
-    width: 100%;
+.title {
+    position: absolute;
+    margin: auto;
+    width: 800px;
+    height: 200px;
+    top: 40%;
 }
 
-#homePageContainer #homePageMainBanner {
-    background-image: url('../images/yellow-car-wallpaper-tiltshift.jpg');
-    height: 100vh;
+/*#homePageContainer {
+    background-image: url('../images/BKGD_landscape.jpg');
+    background-size: cover;
     color: white;
 }
 
@@ -33,4 +37,4 @@
 
 #homePageContainer #homePageAboutUs .container {
     padding: 5% 10% 5% 10%;
-}
+}*/

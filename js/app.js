@@ -1,5 +1,6 @@
 (function() {
     var roundaway = window.roundaway = {};
+    roundaway.is_mobile = /Mobi/i.test(navigator.userAgent);
     roundaway.com = angular.module('roundawaycom', ['ngRoute']);
 
     roundaway.com.config(function($routeProvider) {
@@ -31,19 +32,36 @@
 
     })
 
-    $(window).scroll(function() {
-        var parallax = document.getElementsByClassName('parallax');
-        var param = {
-            speed: 3
-        }
-        for (var i = 0; parallax.length > i; i++) {
-            // Calculate the new background position
-            var bgScroll = -((window.scrollY -parallax [i].offsetTop) / param.speed);
-            // Save new background position to the variable
-            var bgPosition = 'center '+ bgScroll + 'px';
-            // Set new background position to the element
-            parallax [i].style.backgroundPosition = bgPosition;
-        }
-    })
+    // var navbar = $("nav#mainNavBar");
+    
+    // var setParallax = function() {
+    //     var vh2 = window.innerHeight / 2;
+    //     var scrollPoint = vh2 - 150; 
+    //     if ($(window).scrollTop() >= scrollPoint)
+    //         navbar.addClass("navbar-fixed parallax");
+    //     else
+    //         navbar.removeClass("navbar-fixed parallax");
+            
+    //     var parallax = document.getElementsByClassName('parallax');
+    //     var param = {
+    //         speed: 3
+    //     }
+    //     for (var i = 0; parallax.length > i; i++) {
+    //         // Calculate the new background position
+    //         var bgScroll = -((window.scrollY -parallax [i].offsetTop) / param.speed);
+    //         // Save new background position to the variable
+    //         var bgPosition = 'center '+ bgScroll + 'px';
+    //         // Set new background position to the element
+    //         parallax [i].style.backgroundPosition = bgPosition;
+    //     }
+    // }
+    // if (!is_mobile)
+    //     $(window).scroll(setParallax);
+    
+    // window.initCtrl = function() {
+    //     if (!is_mobile)
+    //         setParallax();
+    //     window.scrollTo(0, 0);
+    // }
 
 }())

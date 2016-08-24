@@ -1,5 +1,36 @@
-#aboutPageContainer #aboutPageMainBanner {
+#aboutPageContainer .container {
+    padding: 50px 0;
+    height: 100%;
+    position: relative;
+
+    background-image: url('../images/icon_logo_light.png');
+    background-repeat: no-repeat;
+    background-size: 400px;
+    background-position: bottom 50px left 20px;
+}
+
+#aboutPageContainer h2 {
+    font-size: 2.4em;
+    font-weight: 700; 
+}
+
+#aboutPageContainer p {
+    text-indent: 1.6em;
+    font-size: 1.6em;
+}
+
+#aboutPageContainer img {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    bottom: 20px;
+    left: 20px;
+    transform: rotate(15deg);
+}
+
+
+/*#aboutPageContainer #aboutPageMainBanner {
     background-image: url('../images/yellow-car-wallpaper-tiltshift.jpg');
     height: 50vh;
     color: white;
-}
+}*/
