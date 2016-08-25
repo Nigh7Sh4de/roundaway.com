@@ -3,7 +3,7 @@
     height: 100%;
     position: relative;
 
-    background-image: url('../images/icon_logo_light.png');
+    /*background-image: url('../images/icon_logo_light.png');*/
     background-repeat: no-repeat;
     background-size: 400px;
     background-position: bottom 50px left 20px;

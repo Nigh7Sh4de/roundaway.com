@@ -1,5 +1,5 @@
 (function() {
-    var roundaway = window.roundaway = {};
+    window.roundaway = {};
     roundaway.is_mobile = /Mobi/i.test(navigator.userAgent);
     roundaway.com = angular.module('roundawaycom', ['ngRoute']);
 
