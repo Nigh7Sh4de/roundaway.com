@@ -29,6 +29,7 @@
                             typeof data.data.data !== 'string')
                             throw new Error('Did not receive JWT in auth response.');
                         roundaway.jwt = data.data.data;
+                        $http.defaults.headers.common.Authorization = 'JWT ' + roundaway.jwt;
                         $location.path('/manage');
                     })
                     .catch(function(err) {
