@@ -5,7 +5,7 @@
 
         $http.get('/api/spots')
         .then(function(res) {
-            $scope.res = res.data;
+            $scope.spots = res.data.data;
         })
         .catch(function(err) {
             console.error(err);

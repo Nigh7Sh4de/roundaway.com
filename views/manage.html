@@ -1,4 +1,23 @@
-<div class="jumbotron">
-    <h1>Welcome to the Management Tool!</h1>
-    {{res}}
+<div id="managePageContainer" class="page-container">
+    <div class="container">
+        <h1>Welcome to the Management Tool!</h1>
+        {{spots}}
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <td>ID</td>
+                    <td colspan="2">LOCATION</td>
+                    <td>PRICE</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="spot in spots">
+                    <td>{{spot.id}}</td>
+                    <td>{{spot.location.coordinates}}</td>
+                    <td>{{spot.location.address}}</td>
+                    <td>{{spot.price}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
