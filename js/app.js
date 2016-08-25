@@ -21,6 +21,10 @@
             templateUrl: 'views/login.html',
             controller: 'LoginCtrl'
         })
+        .when('/manage', {
+            templateUrl: 'views/manage.html',
+            controller: 'ManageCtrl'
+        })
         .when('/profile', {
             templateUrl: 'views/profile.html',
             controller: 'ProfileCtrl'
@@ -28,7 +32,7 @@
         .when('/404', {
             templateUrl: 'views/404.html'
         })
-        .otherwise('/404')
+        // .otherwise('/404')
 
     })
 

@@ -16,7 +16,7 @@
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
     
-    var LoginCtrl = function($scope, $http) {
+    var LoginCtrl = function($scope, $http, $location) {
 
         $scope.login = function() {
             FB.login(function(response) {
@@ -29,6 +29,7 @@
                             typeof data.data.data !== 'string')
                             throw new Error('Did not receive JWT in auth response.');
                         roundaway.jwt = data.data.data;
+                        $location.path('/manage');
                     })
                     .catch(function(err) {
                         console.error(err);
