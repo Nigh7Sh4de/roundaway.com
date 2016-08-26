@@ -4,27 +4,11 @@
     <meta charset="UTF-8">
     <title>Roundaway</title>
 </head>
-<body ng-app="roundawaycom" >
-    <div class="main-container" ng-controller="MainCtrl">
-        <nav class="navbar">
-            <a href="#/" class="navbar-brand nav-item">Roundaway</a>
-            <ul class="nav navbar-nav pull-xs-right">
-                <li class="nav-item"><a href="#/about" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="#/contact" class="nav-link">Contact</a></li>
-                <li data-ng-show="loggedin" class="nav-item"><a href="#/profile" class="nav-link">Profile</a></li>
-                <li data-ng-show="loggedin" class="nav-item"><a href="#/manage" class="nav-link">Manage</a></li>
-                <li data-ng-hide="true || loggedin" class="nav-item"><a href="#/login" class="nav-link">Login</a></li>
-                <li data-ng-show="loggedin" class="nav-item"><a href="/logout" class="nav-link">Logout</a></li>
-            </ul>
-        </nav>
-
-        <div data-ng-view></div>
-
-    </div>
-
+<body>
+    <div id="mainview"></div>
 
    <link rel="stylesheet" href="css/vendor/bootstrap.css">
-   <link rel="stylesheet" href="css/vendor/tether.css">
+   <!--<link rel="stylesheet" href="css/vendor/tether.css">-->
    <link rel="stylesheet" href="css/vendor/font-awesome.css">
    <link rel="stylesheet" href="css/app.css">
    <link rel="stylesheet" href="css/nav.css">
@@ -34,19 +18,20 @@
    <link rel="stylesheet" href="css/profile.css">
    <link rel="stylesheet" href="css/manage.css">
 
-   <script src="js/vendor/jquery.js"></script>
-   <script src="js/vendor/angular.js"></script>
-   <script src="js/vendor/angular-route.js"></script>
-   <script src="js/vendor/tether.js"></script>
-   <script src="js/vendor/bootstrap.js"></script>
-   <script src="js/app.js"></script> 
-   <script src="js/config.js"></script>
-   <script src="js/controllers/mainCtrl.js"></script>
-   <script src="js/controllers/homeCtrl.js"></script>
-   <script src="js/controllers/aboutCtrl.js"></script>
-   <script src="js/controllers/contactCtrl.js"></script>
-   <script src="js/controllers/profileCtrl.js"></script>
-   <script src="js/controllers/loginCtrl.js"></script>
-   <script src="js/controllers/manageCtrl.js"></script>
+   <!--<script src="js/vendor/jquery.js"></script>-->
+   <!--<script src="js/vendor/angular.js"></script>-->
+   <!--<script src="js/vendor/angular-route.js"></script>-->
+   <!--<script src="js/vendor/tether.js"></script>-->
+   <!--<script src="js/vendor/bootstrap.js"></script>-->
+   <script src="bundle.js"></script> 
+   <!--<script src="js/app.js"></script> -->
+   <!--<script src="js/config.js"></script>-->
+   <!--<script src="js/controllers/mainCtrl.js"></script>-->
+   <!--<script src="js/controllers/homeCtrl.js"></script>-->
+   <!--<script src="js/controllers/aboutCtrl.js"><script>-->
+   <!--<script src="js/controllers/contactCtrl.js"></script>-->
+   <!--<script src="js/controllers/profileCtrl.js"></script>-->
+   <!--<script src="js/controllers/loginCtrl.js"></script>-->
+   <!--<script src="js/controllers/manageCtrl.js"></script>-->
 </body>
 </html>
