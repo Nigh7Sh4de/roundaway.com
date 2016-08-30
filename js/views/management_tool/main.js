@@ -1,10 +1,12 @@
 import React from 'react';
 import Row from './row';
 import Cell from './cell';
+import Store from './../../controllers/redux.js';
 
 var spots = [
     {
         id: '123',
+        name: 'Fakey',
         location: {
             coordinates: [12, 21],
             address: '123 fake st'
@@ -15,6 +17,7 @@ var spots = [
     },
     {
         id: '456',
+        name: 'Derpo',
         location: {
             coordinates: [21, 34],
             address: '456 derp lane'
@@ -27,6 +30,16 @@ var spots = [
 
 module.exports = class MainView extends React.Component {
     render() {
+        // Store.dispatch({
+        //     type: 'FETCH',
+        //     payload: {
+        //         method: 'GET',
+        //         url: 'http://localhost:8081/api/spots',
+        //     }
+        // });
+
+        //GET SPOTS
+
         var rows = spots.map((spot, i) => {
             return (
                 <Row key={i}>

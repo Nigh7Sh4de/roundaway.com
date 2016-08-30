@@ -1,19 +1,7 @@
-import { createStore } from 'redux';
 import React from 'react';
 import { render } from 'react-dom';
-
 import MainView from './views/main';
 
-const controller = function(state, action) {
-    console.log('reducer', state, action);
-    return state;
-}
-
-const store = createStore(controller, 0);
-
-store.subscribe(() => {
-    window.store = store;
-})
 
 render(<MainView />, document.getElementById('mainview'));
 
