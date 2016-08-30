@@ -30,15 +30,10 @@ var spots = [
 
 module.exports = class MainView extends React.Component {
     render() {
-        // Store.dispatch({
-        //     type: 'FETCH',
-        //     payload: {
-        //         method: 'GET',
-        //         url: 'http://localhost:8081/api/spots',
-        //     }
-        // });
-
         //GET SPOTS
+        Store.dispatch({
+            type: 'GET_SPOTS' 
+        });
 
         var rows = spots.map((spot, i) => {
             return (
