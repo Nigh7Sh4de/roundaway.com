@@ -1,22 +1,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import Athena from './Athena';
+
 class app extends React.Component {
     render() {
-        let spots = this.props.spots || [];
-        spots = this.props.spots.map((spot, i) => {
-            return <span key={i}>{'| ' + spot + ' | '}</span>;
-        })
         return (
             <div>
-                {spots}
+                <Athena spots={this.props.spots} />
             </div>
         ) 
     }
 }
 
-export default connect((state) => {
-    return {
-        spots: state.spots
-    }
-})(app);
+export default connect((state) => state)(app);
