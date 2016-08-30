@@ -1,9 +1,11 @@
 import React from 'react';
 import { render } from 'react-dom';
+import Store from './controllers/redux.js';
+import { Provider } from 'react-redux';
 import MainView from './views/main';
 
 
-render(<MainView />, document.getElementById('mainview'));
+render(<Provider store={Store}><MainView /></Provider>, document.getElementById('mainview'));
 
 
 

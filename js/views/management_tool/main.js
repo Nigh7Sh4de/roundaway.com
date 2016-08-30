@@ -31,9 +31,13 @@ var spots = [
 module.exports = class MainView extends React.Component {
     render() {
         //GET SPOTS
-        Store.dispatch({
-            type: 'GET_SPOTS' 
-        });
+        // Store.getSpots();
+
+        // Store.dispatch({type: 'GET_SPOTS'});
+
+        spots = this.props.spots || [];
+
+        console.log(this.props);
 
         var rows = spots.map((spot, i) => {
             return (

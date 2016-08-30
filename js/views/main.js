@@ -1,9 +1,14 @@
 import React from 'react';
+import { connect } from 'react-redux'
 import MainNav from './nav';
-import ManagementTool from './management_tool/main'
+import ManagementTool from './management_tool/main';
+import Store from './../controllers/redux.js';
 
-module.exports = class MainView extends React.Component {
+class MainView extends React.Component {
+
     render() {
+        Store.getSpots();
+
         return (
             <div className="main-container">
                 <MainNav />
@@ -12,3 +17,11 @@ module.exports = class MainView extends React.Component {
         );
     }
 };
+
+module.exports = connect(
+    (state) => {
+        return {
+            spots: state.store
+        }
+    }
+)(MainView);
