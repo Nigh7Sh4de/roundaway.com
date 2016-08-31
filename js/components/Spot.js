@@ -1,13 +1,19 @@
 import React from 'react';
 
-export default class extends React.Component {
-    render() {
-        const spot = this.props.spot;
-        return (
-            <div>
-                <div>{spot.id}</div>
-                <div>{spot.name}</div>
+require('./../../scss/spot.scss');
+
+export default (props) => {
+    const spot = props.spot;
+    return (
+        <div className="spot">
+            <div className="info">
+                <div className="label">Id</div>
+                <div className="value">{spot.id}</div>
             </div>
-        )
-    }
+            <div className="info">
+                <div className="label">Name</div>
+                <div className="value">{spot.name}</div>
+            </div>
+        </div>
+    )
 }

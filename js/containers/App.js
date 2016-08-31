@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import Athena from './Athena';
 
-class app extends React.Component {
+class App extends React.Component {
     render() {
         return (
             <div>
@@ -13,4 +13,4 @@ class app extends React.Component {
     }
 }
 
-export default connect((state) => state)(app);
+export default App;// connect((state) => state)(App);

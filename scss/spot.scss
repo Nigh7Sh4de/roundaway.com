@@ -1,0 +1,22 @@
+.spot {
+    margin: 10px;
+    padding: 20px;
+    background-color: #ccc;
+    display: inline-block;
+}
+
+.spot .info {
+    display: block;
+}
+
+.spot .label {
+    display: inline-block;
+    width: 50px;
+    margin-right: 20px;
+    text-align: right;
+    color: dimgrey;
+}
+
+.spot .value {
+    display: inline-block;
+}
