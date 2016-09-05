@@ -3,6 +3,15 @@
 }
 
 #newSpotPageContainer .input-group-addon {
-    width: 100px;
+    width: 150px;
     text-align: right;
+}
+
+#newSpotPageContainer .input-group {
+    width: 100%;
+}
+
+#newSpotPageContainer .overflow-group {
+    max-height: 200px;
+    overflow: auto;
 }

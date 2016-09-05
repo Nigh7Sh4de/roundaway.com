@@ -1,7 +1,7 @@
 <div id="managePageContainer" class="page-container">
     <div class="container">
         <h1>Welcome to the Management Tool!</h1>
-        <a href="#/manage/spots/new" class="btn btn-success"><i class="fa fa-plus" aria-hidden="true"></i>Add Spot</a>
+        <a href="#/manage/spots/new" class="btn btn-success"><i class="glyphicon glyphicon-plus" aria-hidden="true"></i>Add Spot</a>
         <table class="table table-bordered manage-table">
             <thead>
                 <tr>
@@ -11,7 +11,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="spot in spots">
+                <tr ng-repeat="spot in spots" ng-click="editSpot(spot)">
                     <td>{{spot.id}}</td>
                     <td>{{spot.location.coordinates}}</td>
                     <td>{{spot.location.address}}</td>

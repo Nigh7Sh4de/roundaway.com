@@ -1,6 +1,6 @@
 (function() {
     
-    var ManageCtrl = function($scope, $http) {
+    var ManageCtrl = function($scope, $http, $location) {
         $scope.test = "Manage controller started";
 
         $http.get('/api/spots')
@@ -20,6 +20,7 @@
                 perHour: undefined
             }
         };
+
         $scope.searchAddress = function() {
             $http.post('/api/util/location/geocode', {
                 address: $scope.newspot.search_address
@@ -46,7 +47,11 @@
             .catch(function(err) {
                 $scope.newspot.error = err.status + ': ' + (err.data.errors || err.data)
             })
+        }
 
+        $scope.editSpot = function(spot) {
+            $location.path('/manage/spots/' + spot.id);
+            $scope.editspot = spot;
         }
     }
 
