@@ -25,6 +25,10 @@
             templateUrl: 'views/manage.html',
             controller: 'ManageCtrl'
         })
+        .when('/manage/spots/new', {
+            templateUrl: 'views/new_spot.html',
+            controller: 'ManageCtrl'
+        })
         .when('/profile', {
             templateUrl: 'views/profile.html',
             controller: 'ProfileCtrl'

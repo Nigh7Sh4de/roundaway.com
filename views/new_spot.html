@@ -1,0 +1,36 @@
+<div id="newSpotPageContainer">
+    <div class="container">
+        <div ng-model="newspot.address" ng-if="!newspot.ready">
+            <div class="input-group">
+                <input class="form-control" type="text" placeholder="address" />
+                <span class="input-group-btn">
+                    <button ng-click="searchAddress()" class="btn btn-primary"><i class="fa fa-search" aria-hidden="true"></i>Search</button>
+                </span>
+            </div>
+            <a href="" class="" ng-click="skipAddress()">I already know my coordinates</a>
+        </div>
+        <div ng-if="newspot.ready">
+            <div>
+                <h5>Coordinates<h5>
+                <div class="input-group">
+                    <span class="input-group-addon">longitude</span>
+                    <input type="text" class="form-control" ng-model="newspot.location.coordinates.longitude" />
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon">latitude</span>
+                    <input type="text" class="form-control" ng-model="newspot.location.coordinates.latitude" />
+                </div>
+            </div>
+            <div>
+                <h5>Price breakdown<h5>
+                <div class="input-group">
+                    <span class="input-group-addon">$/hour</span>
+                    <input type="text" ng-model="newspot.price.perhour" class="form-control" />
+                </div>
+            </div>
+            <div>
+                <button ng-click="createSpot()" class="btn btn-primary">Create</button>
+            </div>
+        </div>
+    </div>
+</div>
