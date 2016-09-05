@@ -1,7 +1,7 @@
 (function() {
     window.roundaway = {};
     roundaway.is_mobile = /Mobi/i.test(navigator.userAgent);
-    roundaway.com = angular.module('roundawaycom', ['ngRoute']);
+    roundaway.com = angular.module('roundawaycom', ['ngRoute', 'ae-datetimepicker']);
 
     roundaway.com.config(function($routeProvider) {
         $routeProvider
@@ -28,6 +28,10 @@
         .when('/manage/spots/new', {
             templateUrl: 'views/new_spot.html',
             controller: 'ManageCtrl'
+        })
+        .when('/manage/spots/:spot_id', {
+            templateUrl: 'views/edit_spot.html',
+            controller: 'ManageSpotCtrl'
         })
         .when('/profile', {
             templateUrl: 'views/profile.html',

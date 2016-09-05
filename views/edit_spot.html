@@ -1,0 +1,98 @@
+<div id="newSpotPageContainer">
+    <div class="container">
+        <div ng-if="spot.success" class="alert alert-success" role="alert">
+            <strong>Success!</strong> {{spot.success !== true ? spot.success : ''}}
+        </div>
+        <div ng-if="spot.error" class="alert alert-danger" role="alert">
+            <strong>Failed!</strong> {{spot.error}}
+        </div>
+        <form>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="user">id</label>
+                <span class="col-sm-10">
+                    <input type="text" class="form-control" ng-disabled="true" ng-model="spot.id" />
+                </span>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="user">user</label>
+                <span class="col-sm-10">
+                    <input type="text" class="form-control" ng-disabled="true" ng-model="spot.user" />
+                </span>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="price">price</label>
+                <span class="col-sm-10">
+                    <div class="input-group">
+                        <span class="input-group-addon">$/hour</span>
+                        <input type="text" ng-disabled="!spot.edit.price.perHour" ng-model="spot.price.perHour" class="form-control" />
+                        <span class="input-group-btn">
+                            <button class="btn btn-danger" ng-click="cancelEditPrice()" ng-if="spot.edit.price.perHour" type="button"><i class="glyphicon glyphicon-trash" area-hidden="true"></i></button>
+                            <button class="btn btn-primary" ng-click="updatePrice()" ng-if="spot.edit.price.perHour" type="button"><i class="glyphicon glyphicon-ok" area-hidden="true"></i></button>
+                            <button class="btn btn-default" ng-click="editPrice()" type="button"><i class="glyphicon glyphicon-pencil" area-hidden="true"></i></button>
+                        </span>
+                    </div>
+                </span>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="location">location</label>
+                <span class="col-sm-10">
+                    <div class="input-group">
+                        <span class="input-group-addon">address</span>
+                        <input type="text" ng-disabled="true" ng-model="spot.location.address" class="form-control" />
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">coordinates</span>
+                        <input type="text" ng-disabled="true" ng-model="spot.location.coordinates" class="form-control" />
+                    </div>
+                </span>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="lot">lot</label>
+                <span class="col-sm-10">
+                    <input type="text" class="form-control" ng-disabled="true" ng-model="spot.lot" />
+                </span>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="description">description</label>
+                <span class="col-sm-10">
+                    <input type="text" class="form-control" ng-disabled="true" ng-model="spot.description" />
+                </span>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="available">available</label>
+                <span class="col-sm-10">
+                    <div>
+                        <h6>Available time ranges: {{spot.available.ranges.length}}</h6>
+                        Next ranges:
+                        <ul class="list-group overflow-group">
+                            <li class="list-group-item" ng-repeat="range in spot.available.ranges">
+                                <p><strong>from </strong>{{ formatDate(range.start) }}</p>
+                                <p><strong>to </strong>{{ formatDate(range.end)}}</p>
+                            </li>
+                        </ul>
+                        <div class="btn-group" ng-if="!spot.edit.available">
+                            <button class="btn btn-success" ng-click="addAvailability()"><i class="glyphicon glyphicon-plus" aria-hidden="true"></i> Add Availability</button>
+                            <button class="btn btn-danger" ng-click="removeAvailability()"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i> Remove Availability</button>
+                        </div>
+                        <div class="form-inline form-group" ng-if="spot.edit.available">
+                            <input type="text" class="form-control" ng-model="spot.edit.available.start" options="{widgetPositioning: { vertical: 'bottom' }}" datetimepicker />
+                            <input type="text" class="form-control" ng-model="spot.edit.available.end" options="{widgetPositioning: { vertical: 'bottom' }}" datetimepicker />
+                            <div class="input-group" style="width: auto">
+                                <!--<span class="input-group-addon" style="width: 50px">Repeat</span>-->
+                                <div class="input-group-btn">
+                                    <button class="btn btn-default" ng-click="setRepeat('day')" type="button"><i class="glyphicon" ng-class="getAvailableIntervalButtonClass('day')" area-hidden="true"></i> Daily</button>
+                                    <button class="btn btn-default" ng-click="setRepeat('week')" type="button"><i class="glyphicon" ng-class="getAvailableIntervalButtonClass('week')" area-hidden="true"></i> Weekly</button>
+                                </div>
+                                <input type="text" style="width: 65px" placeholder="Count" class="form-control" ng-model="spot.edit.available.count" />
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-danger" ng-click="cancelUpdateAvailability()"><i class="glyphicon glyphicon-trash" area-hidden="true"></i></button>
+                                <button class="btn btn-primary" ng-disabled="!spot.edit.available.start || !spot.edit.available.end || spot.edit.available.start >= spot.edit.available.end" ng-click="updateAvailability()"><i class="glyphicon glyphicon-ok" area-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </span>
+            </div>
+        </form>
+    </div>
+</div>
