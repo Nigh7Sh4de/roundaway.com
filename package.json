@@ -1,6 +1,6 @@
 {
   "name": "roundaway.com",
-  "version": "0.0.0",
+  "version": "0.0.2",
   "description": "The company website for the startup Roundaway Inc",
   "main": "index.html",
   "scripts": {
