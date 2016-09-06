@@ -1,23 +1,25 @@
 <div id="managePageContainer" class="page-container">
     <div class="container">
-        <h1>Welcome to the Management Tool!</h1>
-        <a href="#/manage/spots/new" class="btn btn-success"><i class="glyphicon glyphicon-plus" aria-hidden="true"></i>Add Spot</a>
-        <table class="table table-bordered manage-table">
-            <thead>
-                <tr>
-                    <td>ID</td>
-                    <td colspan="2">LOCATION</td>
-                    <td>PRICE</td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr ng-repeat="spot in spots" ng-click="editSpot(spot)">
-                    <td>{{spot.id}}</td>
-                    <td>{{spot.location.coordinates}}</td>
-                    <td>{{spot.location.address}}</td>
-                    <td>{{spot.price}}</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="manage-container">
+            <h1>Welcome to the Management Tool!</h1>
+            <a href="#/manage/spots/new" class="btn btn-success"><i class="glyphicon glyphicon-plus" aria-hidden="true"></i>Add Spot</a>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <td>ID</td>
+                        <td colspan="2">LOCATION</td>
+                        <td>PRICE</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="spot in spots" ng-click="editSpot(spot)">
+                        <td>{{spot.id}}</td>
+                        <td>{{spot.location.coordinates}}</td>
+                        <td>{{spot.location.address}}</td>
+                        <td>{{spot.price}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>

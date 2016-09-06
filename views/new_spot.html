@@ -1,38 +1,40 @@
-<div id="newSpotPageContainer">
+<div id="newSpotPageContainer" class="page-container">
     <div class="container">
-        <div class="jumbotron">
-            <h4>Search for location</h4>
-            <div class="input-group">
-                <input class="form-control" type="text" placeholder="address" ng-model="newspot.search_address" />
-                <span class="input-group-btn">
-                    <button ng-disabled="!newspot.search_address" ng-click="searchAddress()" class="btn btn-primary"><i class="glyphicon glyphicon-search" aria-hidden="true"></i>Search</button>
-                </span>
+        <div class="manage-container">
+            <div class="jumbotron">
+                <h4>Search for location</h4>
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="address" ng-model="newspot.search_address" />
+                    <span class="input-group-btn">
+                        <button ng-disabled="!newspot.search_address" ng-click="searchAddress()" class="btn btn-primary"><i class="glyphicon glyphicon-search" aria-hidden="true"></i>Search</button>
+                    </span>
+                </div>
             </div>
-        </div>
-        <div>
-            <h5>Spot</h5>
-            <h6>Location</h6>
-            <div class="input-group">
-                <span class="input-group-addon">address</span>
-                <select class="form-control" ng-model="newspot.address" ng-options="address for address in newspot.result_address"></select>
-                <!--<input type="text" ng-model="newspot.address" class="form-control" ng-disabled="true" />-->
-            </div>
-            <br />
-            <h6>Price breakdown</h6>
-            <div class="input-group">
-                <span class="input-group-addon">$/hour</span>
-                <input type="text" ng-model="newspot.price.perHour" class="form-control" />
-            </div>
-            <br />
             <div>
-                <button ng-disabled="!newspot.address || !newspot.price.perHour || newspot.success" ng-click="createSpot()" class="btn btn-primary">Create</button>
+                <h5>Spot</h5>
+                <h6>Location</h6>
+                <div class="input-group">
+                    <span class="input-group-addon">address</span>
+                    <select class="form-control" ng-model="newspot.address" ng-options="address for address in newspot.result_address"></select>
+                    <!--<input type="text" ng-model="newspot.address" class="form-control" ng-disabled="true" />-->
+                </div>
+                <br />
+                <h6>Price breakdown</h6>
+                <div class="input-group">
+                    <span class="input-group-addon">$/hour</span>
+                    <input type="text" ng-model="newspot.price.perHour" class="form-control" />
+                </div>
+                <br />
+                <div>
+                    <button ng-disabled="!newspot.address || !newspot.price.perHour || newspot.success" ng-click="createSpot()" class="btn btn-primary">Create</button>
+                </div>
             </div>
-        </div>
-        <div ng-if="newspot.success" class="alert alert-success" role="alert">
-            Success!
-        </div>
-        <div ng-if="newspot.error" class="alert alert-danger" role="alert">
-            <strong>Failed!</strong> {{newspot.error}}
+            <div ng-if="newspot.success" class="alert alert-success" role="alert">
+                Success!
+            </div>
+            <div ng-if="newspot.error" class="alert alert-danger" role="alert">
+                <strong>Failed!</strong> {{newspot.error}}
+            </div>
         </div>
     </div>
 </div>

@@ -472,7 +472,7 @@
 
                 widget.css({
                     top: vertical === 'top' ? 'auto' : position.top + element.outerHeight(),
-                    bottom: vertical === 'top' ? position.top + element.outerHeight() : 'auto',
+                    bottom: vertical === 'top' ? element.outerHeight() + options.additionalBottomMargin : 'auto',
                     left: horizontal === 'left' ? (parent === element ? 0 : position.left) : 'auto',
                     right: horizontal === 'left' ? 'auto' : parent.outerWidth() - element.outerWidth() - (parent === element ? 0 : position.left)
                 });
@@ -1938,6 +1938,11 @@
             return picker;
         };
 
+        picker.additionalBottomMargin = function (amount) {
+            update();
+            return picker;
+        };
+
         picker.widgetPositioning = function (widgetPositioning) {
             if (arguments.length === 0) {
                 return $.extend({}, options.widgetPositioning);
@@ -2367,6 +2372,7 @@
     };
 
     $.fn.datetimepicker.defaults = {
+        additionalBottomMargin: 0,
         timeZone: 'Etc/UTC',
         format: false,
         dayViewHeaderFormat: 'MMMM YYYY',
