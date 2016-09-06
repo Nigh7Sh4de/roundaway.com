@@ -8,12 +8,56 @@
                 price: {
                     perHour: false
                 },
+                name: false,
+                description: false,
                 available: false
             }
         })
         .catch(function(err) {
             $scope.spot.error = err;
         })
+
+        $scope.editName = function() {
+            $scope.spot.edit.name = $scope.spot.name || '';
+        }
+
+        $scope.cancelEditName = function() {
+            $scope.spot.name = $scope.spot.edit.name;
+            $scope.spot.edit.name = false;
+        }
+
+        $scope.updateName = function() {
+            $scope.spot.error = null;
+            $http.put('/api/spots/' + $scope.spot.id + '/name', { name: $scope.spot.name })
+            .then(function(res) {
+                $scope.spot.success = 'Updated name';
+                $scope.spot.edit.name = false;
+            })
+            .catch(function(error) {
+                $scope.spot.error = error;
+            })
+        }
+
+        $scope.editDescription = function() {
+            $scope.spot.edit.description = $scope.spot.description || '';
+        }
+
+        $scope.cancelEditDescription = function() {
+            $scope.spot.description = $scope.spot.edit.description;
+            $scope.spot.edit.description = false;
+        }
+
+        $scope.updateDescription = function() {
+            $scope.spot.error = null;
+            $http.put('/api/spots/' + $scope.spot.id + '/description', { description: $scope.spot.description })
+            .then(function(res) {
+                $scope.spot.success = 'Updated description';
+                $scope.spot.edit.description = false;
+            })
+            .catch(function(error) {
+                $scope.spot.error = error;
+            })
+        }
 
         $scope.editPrice = function() {
             $scope.spot.edit.price = {
@@ -29,6 +73,7 @@
         }
 
         $scope.updatePrice = function() {
+            $scope.spot.error = null;
             $http.put('/api/spots/' + $scope.spot.id + '/price', $scope.spot.price)
             .then(function(res) {
                 $scope.spot.success = 'Updated price';
@@ -78,6 +123,7 @@
         }
 
         $scope.updateAvailability = function() {
+            $scope.spot.error = null;
             var oneday = 1000*60*60*24;
             var oneweek = oneday*7;
             if ($scope.spot.edit.available.interval === 'day')
@@ -89,8 +135,6 @@
 
             if (!$scope.spot.edit.available.interval)
                 delete $scope.spot.edit.available.count;
-
-            console.log($scope.spot.edit.available);
 
             var _remove = $scope.spot.edit.available.mode === 'add' ? '' : '/remove';
             $http.put('/api/spots/' + $scope.spot.id + '/available' + _remove, $scope.spot.edit.available)

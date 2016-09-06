@@ -14,6 +14,32 @@
                 </span>
             </div>
             <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="name">name</label>
+                <span class="col-sm-10">
+                    <div class="input-group">
+                        <input type="text" ng-disabled="spot.edit.name === false" ng-model="spot.name" class="form-control" />
+                        <span class="input-group-btn">
+                            <button class="btn btn-danger" ng-click="cancelEditName()" ng-if="spot.edit.name !== false" type="button"><i class="glyphicon glyphicon-trash" area-hidden="true"></i></button>
+                            <button class="btn btn-primary" ng-click="updateName()" ng-if="spot.edit.name !== false" type="button"><i class="glyphicon glyphicon-ok" area-hidden="true"></i></button>
+                            <button class="btn btn-default" ng-click="editName()" type="button"><i class="glyphicon glyphicon-pencil" area-hidden="true"></i></button>
+                        </span>
+                    </div>
+                </span>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="description">description</label>
+                <span class="col-sm-10">
+                    <div class="input-group">
+                        <input type="text" ng-disabled="spot.edit.description === false" ng-model="spot.description" class="form-control" />
+                        <span class="input-group-btn">
+                            <button class="btn btn-danger" ng-click="cancelEditDescription()" ng-if="spot.edit.description !== false" type="button"><i class="glyphicon glyphicon-trash" area-hidden="true"></i></button>
+                            <button class="btn btn-primary" ng-click="updateDescription()" ng-if="spot.edit.description !== false" type="button"><i class="glyphicon glyphicon-ok" area-hidden="true"></i></button>
+                            <button class="btn btn-default" ng-click="editDescription()" type="button"><i class="glyphicon glyphicon-pencil" area-hidden="true"></i></button>
+                        </span>
+                    </div>
+                </span>
+            </div>
+            <div class="form-group row">
                 <label class="col-sm-2 col-form-label" for="user">user</label>
                 <span class="col-sm-10">
                     <input type="text" class="form-control" ng-disabled="true" ng-model="spot.user" />
@@ -50,12 +76,6 @@
                 <label class="col-sm-2 col-form-label" for="lot">lot</label>
                 <span class="col-sm-10">
                     <input type="text" class="form-control" ng-disabled="true" ng-model="spot.lot" />
-                </span>
-            </div>
-            <div class="form-group row">
-                <label class="col-sm-2 col-form-label" for="description">description</label>
-                <span class="col-sm-10">
-                    <input type="text" class="form-control" ng-disabled="true" ng-model="spot.description" />
                 </span>
             </div>
             <div class="form-group row">
