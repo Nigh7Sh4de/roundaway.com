@@ -18,6 +18,11 @@ body {
     color: #30343A;
 }
 
+a.anchor {
+    position: absolute;
+    top: -178px;
+}
+
 .container {
     padding: 50px 0;
 }
