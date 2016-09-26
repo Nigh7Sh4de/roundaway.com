@@ -1,0 +1,17 @@
+#servicesPageContainer {
+    color: #fff;
+    background-color: #999;
+}
+
+#servicesPageContainer h1 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    font-size: 3.2em;
+}
+
+#servicesPageContainer .col-md-4 {
+    font-size: 1.6em;
+    padding-left: 40px;
+    padding-right: 40px;
+}

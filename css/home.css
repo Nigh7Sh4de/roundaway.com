@@ -3,15 +3,18 @@
     margin: auto;
     width: 800px;
     height: 200px;
-    top: 40%;
+    top: 150px;
 }
 
-/*#homePageContainer {
-    background-image: url('../images/BKGD_landscape.jpg');
-    background-size: cover;
-    color: white;
+#homePageContainer {
+    /*background-image: url('../images/bkgd_new_l_blur.jpg');*/
+    width: 100%;
 }
 
+#homePageContainer img {
+    width: 100%;
+}
+/*
 #homePageContainer #homePageMainBanner h2 {
     padding-left: 20px;
     font-style: italic;

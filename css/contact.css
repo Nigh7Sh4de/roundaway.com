@@ -2,16 +2,14 @@
     text-align: center;
 }
 
-#contactPageContainer h2 {
-    font-size: 4em;
-    font-weight: 700;
+#contactPageContainer h1 {
+    text-align: center;
+    color: #000;
+    font-size: 3.2em;
+    text-transform: uppercase;
+    font-weight: normal;
 }
 
 #contactPageContainer p {
-    font-size: 2em;
-}
-
-#contactPageContainer p strong {
-    color: #0A0B0C;
-    font-weight: 600;
+    font-size: 1.6em;
 }

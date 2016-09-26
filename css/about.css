@@ -1,22 +1,36 @@
+#aboutPageContainer {
+    background-color: #fff;
+    color: #777;
+}
+
 #aboutPageContainer .container {
-    padding: 50px 0;
     height: 100%;
     position: relative;
-
     /*background-image: url('../images/icon_logo_light.png');*/
     background-repeat: no-repeat;
     background-size: 400px;
     background-position: bottom 50px left 20px;
+    font-weight: 100;
+    letter-spacing: 1px;
+}
+
+#aboutPageContainer h1 {
+    text-align: center;
+    color: #000;
+    font-size: 3.2em;
+    text-transform: uppercase;
+    font-weight: normal;
 }
 
 #aboutPageContainer h2 {
-    font-size: 2.4em;
-    font-weight: 700; 
+    text-transform: uppercase;
+    margin-bottom: 40px;
 }
 
-#aboutPageContainer p {
-    text-indent: 1.6em;
+#aboutPageContainer .col-md-4 {
     font-size: 1.6em;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 #aboutPageContainer img {
@@ -27,6 +41,8 @@
     left: 20px;
     transform: rotate(15deg);
 }
+
+    
 
 
 /*#aboutPageContainer #aboutPageMainBanner {
